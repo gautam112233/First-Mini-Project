@@ -52,9 +52,16 @@
 	</tr>
 	
 	<tr>
-		<td>
-			<input type="submit" value="Search" class "btn btn-primary/>
+	
+	 <td>
+			<a href="/" class="btn btn-secondary">Reset</a>
 		</td>
+	 
+		<td>
+			<input type="submit" value="Search" class= "btn btn-primary"/>
+		</td>
+		
+		
 	</tr>
 	
 	</table>
@@ -62,13 +69,14 @@
 	</form:form>
 	
 	<hr/>
-		<table class="table table-striped table-hover">
+		<table class="table table-striped table-hover" >
 			<thead>
 				<tr>
 					<th>S.NO</th>
 					<th>HolderName</th>
 					<th>PlanName</th>
 					<th>PlanStatus</th>
+					<th>Gender</th>
 					<th>StartDate</th>
 					<th>EndDate</th>
 					<th>Benefit</th>
@@ -82,16 +90,25 @@
 					<td>${plan.citizenName }
 					<td>${plan.planName }
 					<td>${plan.planStatus }
+					<td>${plan.gender }
 					<td>${plan.planStartDate }
 					<td>${plan.planEndDate }
 					<td>${plan.benifitAmt }
 				</c:forEach>
+			<tr>
+				<td colspan ="8"  style="text-align: center">
+				<c:if test="${empty plans }"> No Record Found<td>
+				
+				
+				</c:if>
+				</td>
+			</tr>
 			</tbody>
 		</table>
 	
 	<hr/>
 	
-	Export : <a href ="">Excel</a> <a href ="">Pdf</a>
+	Export : <a href ="excel">Excel</a> <a href ="pdf">Pdf</a>
 	
 	</div>
 	

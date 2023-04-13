@@ -17,7 +17,7 @@ public class CitizenPlan {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int citizenId;
+	private Integer citizenId;
 	private String citizenName;
 	private String gender;
 	private String planName;

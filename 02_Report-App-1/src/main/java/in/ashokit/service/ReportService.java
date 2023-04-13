@@ -2,6 +2,8 @@ package in.ashokit.service;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Service;
 
 import in.ashokit.entity.CitizenPlan;
@@ -16,7 +18,7 @@ public interface ReportService {
 	
 	public List<CitizenPlan> search (SearchRequest request );
 	
-	public boolean exportPdf();
+	public boolean exportPdf(HttpServletResponse response) throws Exception ;
 	
-	public boolean exportExcel();
+	public boolean exportExcel(HttpServletResponse response) throws Exception ;
 }
